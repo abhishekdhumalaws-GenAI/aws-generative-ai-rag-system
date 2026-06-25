@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Build artifacts
+build/
+package/
+*.zip
+
+# Local/generated files
+answer.json
+response.json
+awscliv2.zip
+aws/
+lambda-invoke-policy.json
+
+# Secrets/config
+frontend/streamlit/services/config.py
+.env
+*.pem
+
+# CDK
+cdk.out/
