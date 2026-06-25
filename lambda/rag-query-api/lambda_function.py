@@ -1,3 +1,4 @@
+import os
 import json
 import boto3
 from opensearchpy import OpenSearch, RequestsHttpConnection
@@ -8,7 +9,7 @@ service = "es"  # OpenSearch Service (non-serverless)
 
 bedrock = boto3.client("bedrock-runtime", region_name=region)
 
-host = "search-ollama-pamoq2lwd52r3s5bn5jlxczgr4.us-east-1.es.amazonaws.com"
+host = os.environ["OPENSEARCH_HOST"]
 index = "rag-vector-index"
 
 session = boto3.Session()

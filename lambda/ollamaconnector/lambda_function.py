@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 import boto3
@@ -6,7 +7,7 @@ import time
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table("chat-history")
 
-OLLAMA_API_URL = "http://98.93.204.123:11434/api/generate"
+OLLAMA_API_URL = os.environ["OLLAMA_API_URL"]
 MODEL_NAME = "deepseek-r1:8b"
 
 lambda_client = boto3.client("lambda")

@@ -1,3 +1,4 @@
+import os
 import json
 import boto3
 import urllib.parse
@@ -13,7 +14,7 @@ s3 = boto3.client("s3")
 textract = boto3.client("textract")
 bedrock = boto3.client("bedrock-runtime")
 
-host = "search-ollama-pamoq2lwd52r3s5bn5jlxczgr4.us-east-1.es.amazonaws.com"
+host = os.environ["OPENSEARCH_HOST"]
 index_name = "rag-vector-index"
 
 credentials = boto3.Session().get_credentials()
