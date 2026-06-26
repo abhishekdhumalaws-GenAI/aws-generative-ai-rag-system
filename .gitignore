@@ -1,25 +1,58 @@
+# -----------------------------
 # Python
+# -----------------------------
 __pycache__/
-*.pyc
-venv/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
 .venv/
+venv/
 
+# -----------------------------
+# CDK
+# -----------------------------
+cdk.out/
+cdk.context.json
+
+# -----------------------------
 # Build artifacts
+# -----------------------------
 build/
-package/
+dist/
 *.zip
 
-# Local/generated files
+# -----------------------------
+# IDE
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# -----------------------------
+# Environment
+# -----------------------------
+.env
+.env.*
+
+# -----------------------------
+# Runtime output
+# -----------------------------
+*.log
 answer.json
 response.json
-awscliv2.zip
+cdk-response.json
+
+# -----------------------------
+# AWS CLI downloads
+# -----------------------------
 aws/
-lambda-invoke-policy.json
+awscliv2.zip
 
-# Secrets/config
-frontend/streamlit/services/config.py
-.env
-*.pem
-
-# CDK
-cdk.out/
+# -----------------------------
+# Temporary files
+# -----------------------------
+*.tmp
+*.bak
