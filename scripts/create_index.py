@@ -46,7 +46,8 @@ mapping = {
 }
 
 if client.indices.exists(index=index_name):
-    print("Index already exists")
-else:
-    client.indices.create(index=index_name, body=mapping)
-    print("Index created:", index_name)
+    print("Deleting existing wrong index...")
+    client.indices.delete(index=index_name)
+
+client.indices.create(index=index_name, body=mapping)
+print("Created correct index:", index_name)
