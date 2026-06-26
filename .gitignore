@@ -56,3 +56,9 @@ awscliv2.zip
 # -----------------------------
 *.tmp
 *.bak
+
+# Local frontend secret config
+frontend/streamlit/services/config.py
+
+# Lambda layer dependencies
+layers/
